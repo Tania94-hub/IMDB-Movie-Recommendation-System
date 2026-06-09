@@ -130,7 +130,7 @@ The recommendation engine is integrated into a Streamlit web application.
 ## 1. Clone Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/Tania94-hub/IMDB-Movie-Recommendation-System.git
 ```
 
 ## 2. Navigate to Project Folder
