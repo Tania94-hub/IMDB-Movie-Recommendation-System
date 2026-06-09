@@ -1,0 +1,383 @@
+IMDB MOVIE RECOMMENDATION SYSTEM USING STORYLINES
+
+PROJECT REPORT
+
+Submitted By:
+Tania Banerjee
+
+==========================================================
+TABLE OF CONTENTS
+==========================================================
+
+1. Introduction
+2. Problem Statement
+3. Business Use Cases
+4. Skills Acquired
+5. Dataset Description
+6. Project Architecture
+7. Methodology
+8. Data Collection and Scraping
+9. Data Preprocessing
+10. Feature Engineering
+11. Recommendation Engine
+12. Visualization
+13. Streamlit Application
+14. Results and Output
+15. Project Deliverables
+16. Conclusion
+17. Future Enhancements
+18. References
+
+==========================================================
+1. INTRODUCTION
+==========================================================
+
+The entertainment industry generates a vast amount of content every year. Finding relevant movies based on user interests has become a significant challenge. Recommendation systems help users discover movies that match their preferences and viewing habits.
+
+This project focuses on developing a Content-Based Movie Recommendation System using Natural Language Processing (NLP) techniques. The system recommends movies based on storyline similarity. Users can enter a movie storyline, and the application returns the top 5 most similar movies from the dataset.
+
+The recommendation system is built using TF-IDF Vectorization and Cosine Similarity techniques. A user-friendly Streamlit application has been developed to provide an interactive interface for movie recommendations.
+
+==========================================================
+2. PROBLEM STATEMENT
+==========================================================
+
+The objective of this project is to build a movie recommendation system that recommends movies based on storyline similarity.
+
+The system should:
+
+• Extract movie information from IMDb.
+• Store movie names and storylines in CSV format.
+• Perform Natural Language Processing on movie storylines.
+• Convert textual data into numerical feature vectors.
+• Calculate similarity between movies.
+• Recommend the top 5 most similar movies.
+• Provide recommendations through a Streamlit web application.
+
+==========================================================
+3. BUSINESS USE CASES
+==========================================================
+
+Movie Recommendation:
+Users can receive movie suggestions based on storyline similarity.
+
+Personalized Entertainment:
+The recommendation engine helps users discover movies that match their interests.
+
+Content Discovery:
+The system enables users to explore new movies with similar themes and plots.
+
+Recommendation System Learning:
+The project demonstrates how recommendation systems used by streaming platforms work.
+
+==========================================================
+4. SKILLS ACQUIRED
+==========================================================
+
+The project helped develop practical knowledge in:
+
+• Python Programming
+• Selenium Web Scraping
+• Pandas
+• Data Cleaning
+• Natural Language Processing
+• TF-IDF Vectorization
+• Cosine Similarity
+• Machine Learning Concepts
+• Data Visualization
+• Streamlit Application Development
+• GitHub Project Management
+
+==========================================================
+5. DATASET DESCRIPTION
+==========================================================
+
+The dataset contains IMDb movie information.
+
+Dataset Columns:
+
+1. Movie Name
+   - Name of the movie
+
+2. Storyline
+   - Original movie storyline
+
+3. Cleaned_Storyline
+   - Processed storyline used for recommendation
+
+Dataset Statistics:
+
+• Total Movies: 5099
+• Total Features: 3
+
+Dataset Files Used:
+
+• imdb_movies_2024.csv
+• scraped_movies.csv
+
+==========================================================
+6. PROJECT ARCHITECTURE
+==========================================================
+
+IMDb Movie Data
+        |
+        V
+Data Collection
+        |
+        V
+CSV Storage
+        |
+        V
+Text Preprocessing
+        |
+        V
+TF-IDF Vectorization
+        |
+        V
+Cosine Similarity
+        |
+        V
+Recommendation Engine
+        |
+        V
+Streamlit Application
+        |
+        V
+Top 5 Movie Recommendations
+
+==========================================================
+7. METHODOLOGY
+==========================================================
+
+The project consists of four major stages:
+
+Stage 1:
+Data Collection
+
+Stage 2:
+Data Preprocessing
+
+Stage 3:
+Recommendation Model Development
+
+Stage 4:
+Streamlit Application Development
+
+==========================================================
+8. DATA COLLECTION AND SCRAPING
+==========================================================
+
+IMDb movie information was collected and stored in CSV format.
+
+Tools Used:
+
+• Selenium
+• Python
+• Pandas
+
+Scraping Process:
+
+1. Access IMDb movie pages.
+2. Extract movie names.
+3. Extract movie storylines.
+4. Store data in CSV format.
+
+Output File:
+
+scraped_movies.csv
+
+(INSERT selenium_scraper.png SCREENSHOT HERE)
+
+==========================================================
+9. DATA PREPROCESSING
+==========================================================
+
+Storyline text was cleaned and prepared before analysis.
+
+Preprocessing Steps:
+
+• Convert text to lowercase
+• Remove punctuation
+• Remove special characters
+• Remove stopwords
+• Tokenization
+• Text normalization
+
+Example:
+
+Original Text:
+A young wizard begins his journey at a magical school.
+
+Processed Text:
+young wizard begins journey magical school
+
+==========================================================
+10. FEATURE ENGINEERING
+==========================================================
+
+To perform recommendation analysis, textual storylines were transformed into numerical vectors.
+
+Technique Used:
+
+TF-IDF (Term Frequency-Inverse Document Frequency)
+
+Benefits:
+
+• Captures important words
+• Reduces influence of common words
+• Creates numerical feature vectors
+
+Library Used:
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+==========================================================
+11. RECOMMENDATION ENGINE
+==========================================================
+
+The recommendation system uses Cosine Similarity.
+
+Process:
+
+1. Convert storylines into TF-IDF vectors.
+2. Calculate similarity scores.
+3. Rank movies by similarity.
+4. Return top 5 recommendations.
+
+Library Used:
+
+from sklearn.metrics.pairwise import cosine_similarity
+
+Output:
+
+Top 5 most similar movies are returned to the user.
+
+==========================================================
+12. VISUALIZATION
+==========================================================
+
+Visualization was created to understand storyline distribution.
+
+Visualization Performed:
+
+Storyline Length Distribution
+
+Tools Used:
+
+• Matplotlib
+• Seaborn
+
+(INSERT storyline_distribution.png SCREENSHOT HERE)
+
+==========================================================
+13. STREAMLIT APPLICATION
+==========================================================
+
+An interactive web application was developed using Streamlit.
+
+Features:
+
+• User enters storyline
+• Recommendation button
+• Top 5 recommendations displayed
+• Storylines displayed for each recommendation
+
+Technologies Used:
+
+• Streamlit
+• Pandas
+• Scikit-Learn
+
+(INSERT home_page.png SCREENSHOT HERE)
+
+==========================================================
+14. RESULTS AND OUTPUT
+==========================================================
+
+The system successfully recommends movies based on storyline similarity.
+
+Sample Input:
+
+A young wizard begins his journey at a magical school where he makes friends and enemies while facing dark forces.
+
+Sample Output:
+
+• Harry Potter and the Stone
+• Deaner '89
+• IF
+• Sixty Minutes
+• Other similar movies
+
+The recommendation system successfully identifies movies with similar storyline patterns using TF-IDF and Cosine Similarity.
+
+(INSERT recommendation_output.png SCREENSHOT HERE)
+
+==========================================================
+15. PROJECT DELIVERABLES
+==========================================================
+
+Dataset Files:
+
+• imdb_movies_2024.csv
+• scraped_movies.csv
+
+Python Scripts:
+
+• scraping_script.py
+• recommendation_engine.py
+• visualization.py
+• app.py
+
+Notebook:
+
+• IMDB_Movie_Recommendation.ipynb
+
+Documentation:
+
+• Project_Report.docx
+• README.md
+
+Application:
+
+• Streamlit Movie Recommendation System
+
+==========================================================
+16. CONCLUSION
+==========================================================
+
+A Content-Based Movie Recommendation System was successfully developed using Natural Language Processing techniques.
+
+The system processes movie storylines, converts textual information into numerical vectors using TF-IDF, calculates similarity using Cosine Similarity, and recommends the top 5 most relevant movies.
+
+The project demonstrates the practical application of NLP and Machine Learning techniques in recommendation systems and provides an interactive Streamlit-based user interface.
+
+==========================================================
+17. FUTURE ENHANCEMENTS
+==========================================================
+
+Future improvements may include:
+
+• Genre-based filtering
+• User rating integration
+• Hybrid recommendation systems
+• Deep Learning recommendation models
+• Cloud deployment
+• Real-time IMDb scraping
+• Personalized user recommendations
+
+==========================================================
+18. REFERENCES
+==========================================================
+
+1. IMDb Movie Database
+2. Python Documentation
+3. Scikit-Learn Documentation
+4. Streamlit Documentation
+5. Selenium Documentation
+6. Pandas Documentation
+7. Matplotlib Documentation
+8. Seaborn Documentation
+
+==========================================================
+END OF REPORT
+==========================================================
